@@ -1,0 +1,34 @@
+﻿<Window x:Class="GameOfLife.SubWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+        xmlns:local="clr-namespace:GameOfLife"
+        mc:Ignorable="d"
+        Title="NewGameWindow" Height="250" Width="250" ResizeMode="NoResize">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="80"></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Column="0" Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Right">Cell size</TextBlock>
+        <Slider Name="SliderCellsize" Grid.Column="1" Grid.Row="0" Minimum="2" Maximum="20" VerticalAlignment="Center" HorizontalAlignment="Center" Width="100"/>
+
+        <TextBlock Grid.Column="0" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Right">Auto Density</TextBlock>
+        <Slider Name="SliderDensity" Grid.Column="1" Grid.Row="1" Minimum="2" Maximum="50" VerticalAlignment="Center" HorizontalAlignment="Center" Width="100"/>
+
+        <CheckBox Checked="CheckBox_Random_Checked" Unchecked="CheckBox_Random_Unchecked" Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center">Random first generation</CheckBox>
+
+        <CheckBox Checked="CheckBox_Looped_Checked" Unchecked="CheckBox_Looped_Unchecked" Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="2" Margin="46,10,110,19">Looped field</CheckBox>
+        
+        <Button Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="2" Content="Create" Height="25" Width="75" Click="Button_Click"/>
+    </Grid>
+</Window>
